@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 require_relative '../lib/board'
 require_relative '../lib/player'
 require_relative '../lib/utils'
@@ -71,20 +69,11 @@ def won?(board, player)
 end
 
 puts "\n-------- ̄𝕋𝕚𝕔 𝕋𝕒𝕔 𝕋𝕠𝕖 -------- \n".cyan
+p1, p2 = player
+puts "\nWelcome #{p1.name} and #{p2.name}\n".bold
 
-name1, s1, name2, s2 = user_info
-name1 = name1.blue
-s1 = s1.blue
-name2 = name2.red
-s2 = s2.red
-
-puts "\nWelcome #{name1} and #{name2}\n".bold
-
-puts "#{name1} your Token is #{s1}"
-puts "#{name2} your Token is #{s2}"
-
-p1 = Player.new(name1, s1)
-p2 = Player.new(name2, s2)
+puts "#{p1.name} your Token is #{p1.symbol}"
+puts "#{p2.name} your Token is #{p2.symbol}"
 
 puts "\n-------- 𝔾𝕒𝕞𝕖 𝕊𝕥𝕒𝕣𝕥𝕖𝕕 --------\n\n".cyan
 

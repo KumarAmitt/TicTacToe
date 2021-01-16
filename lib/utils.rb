@@ -21,3 +21,16 @@ def user_info
 
   [name1, s1, name2, s2]
 end
+
+def player
+  name1, s1, name2, s2 = user_info
+  name1 = name1.blue
+  s1 = s1.blue
+  name2 = name2.red
+  s2 = s2.red
+
+  p1 = Player.new(name1, s1)
+  p2 = Player.new(name2, s2)
+
+  [p1, p2]
+end
