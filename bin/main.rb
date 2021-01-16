@@ -31,13 +31,13 @@ def position(name)
   if valid_position?(pos)
     pos
   else
-    puts 'Invalid Position. Try different position'
+    puts 'Invalid Position. Try different position'.brown
     position(name)
   end
 end
 
 def select_different_token(name, sym)
-  puts 'Opponent Token. Try different'
+  puts 'Opponent Token. Try different'.brown
   new_sym = player_symbol(name)
   new_sym == sym ? select_different_token(name, sym) : new_sym
 end
@@ -45,7 +45,7 @@ end
 def position_occupied?(board, row, col)
   return false if board.validate?(row, col)
 
-  puts 'Position already Taken'
+  puts 'Position already Taken'.brown
 
   true
 end
