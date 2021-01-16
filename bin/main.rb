@@ -7,7 +7,7 @@ def player_name(num)
   print "Player-#{num} Enter your name: "
   name = gets.chomp
   if name.empty?
-    puts 'Invalid Name'
+    puts 'Invalid Name'.brown
     name = player_name(num)
   end
 
@@ -18,7 +18,7 @@ def player_symbol(name)
   print "#{name} Choose your LUCKY Token: "
   sym = gets.chomp
   if sym.empty? || sym.length > 1
-    puts 'Invalid Token. Please enter a single letter'
+    puts 'Invalid Token. Please enter a single letter'.brown
     sym = player_symbol(name)
   end
 
@@ -31,7 +31,7 @@ def position(name)
   if valid_position?(pos)
     pos
   else
-    puts 'Invalid Position. Try different position'.brown
+    puts "Position doesn't Exists. Try different position".brown
     position(name)
   end
 end
